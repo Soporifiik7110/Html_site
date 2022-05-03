@@ -1,27 +1,80 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
-
-
 * {
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    background-color: #24252A;
-
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #34374e;
 }
 
-li, a, button {
+li,
+a,
+button {
     font-family: "Montserrat", sans-serif;
-    font-weight:500;
+    font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
 }
 
-header{
+header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 30px 10%;
-
 }
-/*du syle pour le logo */
+
+
+/*pour faire tourner le logo*/
+
+.logo {
+    display: flex;
+    position: center;
+    margin-left: 100px;
+    -webkit-animation: spin 8s lineaer infinite;
+    -moz-animation: spin 8s linear infinite;
+    animation: spin 8s linear infinite
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #00ede1
+}
+
+button {
+    padding: 12px 25px;
+    background-color: rgb(158, 38, 172);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(0, 237, 225, 0.8)
+}
+
+
+/*pour dessiner une ligne en dessous*/
+
+.line_1 {
+    height: 1px;
+    background: #1b225a;
+}
